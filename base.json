@@ -3,7 +3,6 @@
    "extends": [
      "config:base",
      ":preserveSemverRanges",
-     ":separatePatchReleases",
      ":disableRateLimiting",
      ":disableVulnerabilityAlerts",
      ":rebaseStalePrs",
@@ -24,9 +23,6 @@
   "commitMessagePrefix": "{{arg0}} - ",
   "branchPrefix": "renovate-{{arg0}}/",
    "labels": ["renovate", "team-{{arg0}}"],
-   "ignorePresets": [
-     ":combinePatchMinorReleases"
-   ],
    "packageRules": [
      {
        "matchUpdateTypes": ["major"],

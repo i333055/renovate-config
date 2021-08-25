@@ -33,10 +33,15 @@
        "addLabels": ["update-major"]
      },
      {
-       "matchUpdateTypes": ["minor", "patch"],
-       "addLabels": ["update-minor-patch"],
-       "groupName": "all minor-patch dependencies",
-       "groupSlug": "all-minor-patch"
-     }
+      "matchPackagePatterns": [
+        "*"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "groupName": "all non-major dependencies",
+      "groupSlug": "all-minor-patch"
+    }
  ]
 }

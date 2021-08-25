@@ -43,7 +43,6 @@
      {
       "matchDepTypes": ["devDependencies"],
       "prPriority": -1
-     },
-     
+     }
    ]
 }

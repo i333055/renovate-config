@@ -23,6 +23,9 @@
   "commitMessagePrefix": "{{arg0}} - ",
   "branchPrefix": "renovate-{{arg0}}/",
    "labels": ["renovate", "team-{{arg0}}"],
+   "minor": {
+      "groupName": "minor"
+   },
    "packageRules": [
      {
        "matchUpdateTypes": ["major"],
@@ -31,9 +34,6 @@
      {
       "matchDepTypes": ["devDependencies"],
       "prPriority": -1
-     },
-     "minor": {
-      "groupName": "minor"
-     },
+     }
    ]
 }

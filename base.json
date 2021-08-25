@@ -17,8 +17,6 @@
       "\\.pom\\.xml$",
       "(^|/)pom\\.xml$",
       "(^|/)external-dependencies\\.xml$"
-    ],
-    "ignorePaths": [
     ]
   },
   "dependencyDashboardTitle": "{{arg0}} Dependency Dashboard",

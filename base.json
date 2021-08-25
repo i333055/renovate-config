@@ -7,9 +7,9 @@
      ":disableVulnerabilityAlerts",
      ":rebaseStalePrs",
      ":dependencyDashboard",
-     ":combinePatchMinorReleases",
      "github>whitesource/merge-confidence:beta"
    ],
+   "separateMinorPatch": false,
    "enabledManagers": ["npm", "nvm", "maven"],
    "gitAuthor": "Renovate Bot <bot@renovateapp.com>",
    "maven": {

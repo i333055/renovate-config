@@ -9,7 +9,6 @@
      ":dependencyDashboard",
      "github>whitesource/merge-confidence:beta"
    ],
-   "separateMinorPatch": false,
    "enabledManagers": ["npm", "nvm", "maven"],
    "gitAuthor": "Renovate Bot <bot@renovateapp.com>",
    "maven": {
@@ -32,6 +31,12 @@
      {
       "matchDepTypes": ["devDependencies"],
       "prPriority": -1
+     },
+     {
+       "matchUpdateTypes": ["minor", "patch"],
+       "addLabels": ["update-minor-patch"],
+       "groupName": "all minor-patch dependencies",
+       "groupSlug": "all-minor-patch"
      }
    ]
 }

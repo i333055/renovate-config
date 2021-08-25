@@ -1,0 +1,45 @@
+{
+   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+   "extends": [
+     "config:base",
+     ":preserveSemverRanges",
+     ":separatePatchReleases",
+     ":disableRateLimiting",
+     ":enableVulnerabilityAlertsWithLabel(priority:blocker)",
+     ":rebaseStalePrs",
+     ":dependencyDashboard",
+     "github>whitesource/merge-confidence:beta"
+   ],
+   "enabledManagers": ["maven"],
+   "maven": {
+    "fileMatch": [
+       "(^|/)pom\\.xml$",
+       "(^|/)external-dependencies\\.xml$"
+    ],
+    "ignorePaths": [
+    ]
+  },
+   "gitAuthor": "Renovate Bot <bot@renovateapp.com>",
+   "dependencyDashboardTitle": "Lulu Dependency Dashboard",
+   "dependencyDashboardHeader": "This issue contains a list of Renovate updates and their statuses for team Holiday.",
+   "commitMessagePrefix": "Holiday - ",
+   "branchPrefix": "renovate-Holiday/",
+   "labels": ["renovate1", "team-Holiday"],
+   "ignorePresets": [
+     ":combinePatchMinorReleases"
+   ],
+   "packageRules": [
+     {
+       "matchUpdateTypes": ["major"],
+       "addLabels": ["update-major"]
+     },
+     {
+       "matchUpdateTypes": ["minor"],
+       "addLabels": ["update-minor"]
+     },
+     {
+       "matchUpdateTypes": ["patch"],
+       "addLabels": ["update-patch"]
+     }
+   ]
+ }

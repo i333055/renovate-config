@@ -29,12 +29,6 @@
        "addLabels": ["update-major"]
      },
      {
-       "matchUpdateTypes": ["minor", "patch"],
-       "addLabels": ["update-minor-patch"],
-       "groupName": "all minor-patch dependencies",
-       "groupSlug": "all-minor-patch"
-     },
-     {
       "matchDepTypes": ["devDependencies"],
       "prPriority": -1
      }

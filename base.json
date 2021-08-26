@@ -25,23 +25,20 @@
   "labels": ["renovate", "team-{{arg0}}"],
   "packageRules": [
      {
-      "matchDepTypes": ["devDependencies"],
-      "prPriority": -1
-     },
-     {
        "matchUpdateTypes": ["major"],
        "addLabels": ["update-major"]
      },
      {
-      "matchPackagePatterns": [
-        "*"
-      ],
-      "matchUpdateTypes": [
-        "minor",
-        "patch"
-      ],
-      "groupName": "all non-major dependencies",
-      "groupSlug": "all-minor-patch"
-    }
+       "matchUpdateTypes": ["minor"],
+       "addLabels": ["update-minor"]
+     },
+     {
+       "matchUpdateTypes": ["patch"],
+       "addLabels": ["update-patch"]
+     },
+     {
+      "matchDepTypes": ["devDependencies"],
+      "prPriority": -1
+     }
  ]
 }

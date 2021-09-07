@@ -22,7 +22,7 @@
   "dependencyDashboardHeader": "This issue contains a list of Renovate updates and their statuses for team {{arg0}}.",
   "commitMessagePrefix": "{{arg0}} - ",
   "branchPrefix": "renovate-{{arg0}}/",
-  "additionalBranchPrefix": "{{parentDir}}-"
+  "additionalBranchPrefix": "{{parentDir}}-",
   "labels": ["renovate", "team-{{arg0}}"],
   "packageRules": [
      {

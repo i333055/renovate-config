@@ -18,7 +18,7 @@
       "(^|/)external-dependencies\\.xml$"
     ]
   },
-  "dependencyDashboardTitle": "Dependency Dashboard",
+  "dependencyDashboardTitle": "test Dependency Dashboard",
   "dependencyDashboardHeader": "This issue contains a list of Renovate updates and their statuses for team {{arg0}}.",
   "commitMessagePrefix": "{{{parentDir}} - ",
   "branchPrefix": "{{arg0}}/",

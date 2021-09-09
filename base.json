@@ -51,22 +51,6 @@
        "enabled": false
      },
      {
-       "matchUpdateTypes": ["lockFileMaintenance"],
-       "addLabels": ["update-lockFileMaintenance"],
-       "commitMessageSuffix": " (lockFileMaintenance)",
-       "prPriority": -4
-     },
-     {
-       "matchUpdateTypes": ["rollback"],
-       "enabled": false
-     }, 
-     {
-       "matchUpdateTypes": ["bump"],
-       "addLabels": ["update-bump"],
-       "commitMessageSuffix": " (bump)",
-       "prPriority": -5
-     },
-     {
       "matchDepTypes": ["devDependencies"],
       "prPriority": -8
      }

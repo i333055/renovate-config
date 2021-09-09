@@ -8,5 +8,67 @@
      ":rebaseStalePrs",
      ":dependencyDashboard",
      "github>whitesource/merge-confidence:beta"
+   ],
+   "enabledManagers": ["npm", "nvm", "maven"],
+   "maven": {
+    "fileMatch": [
+      "\\.pom\\.xml$",
+      "(^|/)pom\\.xml$",
+      "(^|/)external-dependencies\\.xml$"
+    ]
+  },
+  "dependencyDashboardTitle": "{{arg0}} Dependency Dashboard",
+  "dependencyDashboardHeader": "This issue contains a list of Renovate updates and their statuses for {{arg0}}.",
+   "branchPrefix": "renovate-{{arg0}}/",
+   "labels": ["renovate", "{{arg0}}"],
+   "packageRules": [
+     {
+       "matchUpdateTypes": ["major"],
+       "addLabels": ["update-major"],
+       "commitMessageSuffix": " (major)",
+       "prPriority": 5
+     },
+     {
+       "matchUpdateTypes": ["minor"],
+       "addLabels": ["update-minor"],
+       "commitMessageSuffix": " (minor)",
+       "prPriority": -1
+     },
+     {
+       "matchUpdateTypes": ["patch"],
+       "addLabels": ["update-patch"],
+       "commitMessageSuffix": " (patch)",
+       "prPriority": -2
+     },
+     {
+       "matchUpdateTypes": ["pin"],
+       "addLabels": ["update-pin"],
+       "commitMessageSuffix": " (pin)",
+       "prPriority": -3
+     },
+     {
+       "matchUpdateTypes": ["digest"],
+       "enabled": false
+     },
+     {
+       "matchUpdateTypes": ["lockFileMaintenance"],
+       "addLabels": ["update-lockFileMaintenance"],
+       "commitMessageSuffix": " (lockFileMaintenance)",
+       "prPriority": -4
+     },
+     {
+       "matchUpdateTypes": ["rollback"],
+       "enabled": false
+     }, 
+     {
+       "matchUpdateTypes": ["bump"],
+       "addLabels": ["update-bump"],
+       "commitMessageSuffix": " (bump)",
+       "prPriority": -5
+     },
+     {
+      "matchDepTypes": ["devDependencies"],
+      "prPriority": -8
+     }
    ]
 }

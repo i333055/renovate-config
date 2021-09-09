@@ -41,12 +41,6 @@
        "prPriority": -2
      },
      {
-       "matchUpdateTypes": ["pin"],
-       "addLabels": ["update-pin"],
-       "commitMessageSuffix": " (pin)",
-       "prPriority": -3
-     },
-     {
        "matchUpdateTypes": ["digest"],
        "enabled": false
      },

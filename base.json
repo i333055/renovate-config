@@ -65,7 +65,7 @@
        "addLabels": ["update-bump"],
        "commitMessageSuffix": " (bump)",
        "prPriority": -5
-     }
+     },
      {
       "matchDepTypes": ["devDependencies"],
       "prPriority": -8

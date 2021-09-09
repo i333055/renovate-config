@@ -1,4 +1,3 @@
-
 {
    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
    "extends": [
@@ -22,6 +21,8 @@
   "dependencyDashboardHeader": "This issue contains a list of Renovate updates and their statuses for {{arg0}}.",
    "branchPrefix": "renovate-{{arg0}}/",
    "labels": ["renovate", "{{arg0}}"],
+   "digest": { "enabled": false },
+   "rollback": { "enabled": false },
    "packageRules": [
      {
        "matchUpdateTypes": ["major"],
@@ -42,8 +43,26 @@
        "prPriority": -2
      },
      {
+       "matchUpdateTypes": ["pin"],
+       "addLabels": ["update-pin"],
+       "commitMessageSuffix": " (pin)",
+       "prPriority": -3
+     },
+     {
+       "matchUpdateTypes": ["lockFileMaintenance"],
+       "addLabels": ["update-lockFileMaintenance"],
+       "commitMessageSuffix": " (lockFileMaintenance)",
+       "prPriority": -4
+     },
+     {
+       "matchUpdateTypes": ["bump"],
+       "addLabels": ["update-bump"],
+       "commitMessageSuffix": " (bump)",
+       "prPriority": -5
+     }
+     {
       "matchDepTypes": ["devDependencies"],
-      "prPriority": -5
+      "prPriority": -8
      }
    ]
 }

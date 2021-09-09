@@ -39,7 +39,7 @@
        "matchUpdateTypes": ["patch"],
        "addLabels": ["update-patch"],
        "commitMessageSuffix": " (patch)",
-       "prPriority": -1
+       "prPriority": -2
      },
      {
       "matchDepTypes": ["devDependencies"],

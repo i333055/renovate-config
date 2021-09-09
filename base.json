@@ -21,8 +21,6 @@
   "dependencyDashboardHeader": "This issue contains a list of Renovate updates and their statuses for {{arg0}}.",
    "branchPrefix": "renovate-{{arg0}}/",
    "labels": ["renovate", "{{arg0}}"],
-   "digest": { "enabled": false },
-   "rollback": { "enabled": false },
    "packageRules": [
      {
        "matchUpdateTypes": ["major"],
@@ -49,11 +47,19 @@
        "prPriority": -3
      },
      {
+       "matchUpdateTypes": ["digest"],
+       "enabled": false
+     },
+     {
        "matchUpdateTypes": ["lockFileMaintenance"],
        "addLabels": ["update-lockFileMaintenance"],
        "commitMessageSuffix": " (lockFileMaintenance)",
        "prPriority": -4
      },
+     {
+       "matchUpdateTypes": ["rollback"],
+       "enabled": false
+     }, 
      {
        "matchUpdateTypes": ["bump"],
        "addLabels": ["update-bump"],

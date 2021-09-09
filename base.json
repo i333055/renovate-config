@@ -16,9 +16,9 @@
       "(^|/)pom\\.xml$",
       "(^|/)external-dependencies\\.xml$"
     ]
-  },
-  "dependencyDashboardTitle": "{{arg0}} Dependency Dashboard",
-  "dependencyDashboardHeader": "This issue contains a list of Renovate updates and their statuses for {{arg0}}.",
+   },
+   "dependencyDashboardTitle": "{{arg0}} Dependency Dashboard",
+   "dependencyDashboardHeader": "This issue contains a list of Renovate updates and their statuses for {{arg0}}.",
    "branchPrefix": "renovate-{{arg0}}/",
    "labels": ["renovate", "{{arg0}}"],
    "packageRules": [

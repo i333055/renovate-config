@@ -42,7 +42,7 @@
      },
      {
       "matchDepTypes": ["devDependencies"],
-      "prPriority": -8
+      "prPriority": -3
      }
    ]
 }

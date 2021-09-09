@@ -1,3 +1,4 @@
+
 {
    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
    "extends": [
@@ -10,7 +11,6 @@
      "github>whitesource/merge-confidence:beta"
    ],
    "enabledManagers": ["npm", "nvm", "maven"],
-   "gitAuthor": "Renovate Bot <bot@renovateapp.com>",
    "maven": {
     "fileMatch": [
       "\\.pom\\.xml$",
@@ -19,25 +19,31 @@
     ]
   },
   "dependencyDashboardTitle": "{{arg0}} Dependency Dashboard",
-  "dependencyDashboardHeader": "This issue contains a list of Renovate updates and their statuses for team {{arg0}}.",
-  "branchPrefix": "renovate-{{arg0}}/",
-  "labels": ["renovate", "team-{{arg0}}"],
-  "packageRules": [
+  "dependencyDashboardHeader": "This issue contains a list of Renovate updates and their statuses for {{arg0}}.",
+   "branchPrefix": "renovate-{{arg0}}/",
+   "labels": ["renovate", "{{arg0}}"],
+   "packageRules": [
      {
        "matchUpdateTypes": ["major"],
-       "addLabels": ["update-major"]
+       "addLabels": ["update-major"],
+       "commitMessageSuffix": " (major)",
+       "prPriority": 5
      },
      {
        "matchUpdateTypes": ["minor"],
-       "addLabels": ["update-minor"]
+       "addLabels": ["update-minor"],
+       "commitMessageSuffix": " (minor)",
+       "prPriority": -1
      },
      {
        "matchUpdateTypes": ["patch"],
-       "addLabels": ["update-patch"]
+       "addLabels": ["update-patch"],
+       "commitMessageSuffix": " (patch)",
+       "prPriority": -1
      },
      {
       "matchDepTypes": ["devDependencies"],
-      "prPriority": -1
+      "prPriority": -5
      }
- ]
+   ]
 }

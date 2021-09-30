@@ -21,7 +21,7 @@
   "dependencyDashboardHeader": "This issue contains a list of Renovate updates and their statuses for {{arg0}}.",
   "branchPrefix": "renovate-{{arg0}}/",
   "labels": ["renovate", "{{arg0}}"],
-  "commitMessageExtra" : "to {{#if isSingleVersion}}v{{{newVersion}}}{{else}}{{{newValue}}}{{/if}}{{/if}}",
+  "commitMessageExtra" : "to {{#if isSingleVersion}}v{{{newVersion}}}{{else}}{{{newValue}}}{{/if}}",
   "packageRules": [
      {
        "matchUpdateTypes": ["major"],
